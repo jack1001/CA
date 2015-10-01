@@ -1,0 +1,109 @@
+{
+    "category": "Deploy", 
+    "provider": "CA-Release-Automation", 
+    "version": "4",
+	"settings": {
+        "entityUrlTemplate": "{Config:ServerUrl}/datamanagement/index.jsp#/main/deployments",
+        "executionUrlTemplate": "{Config:ServerUrl}/datamanagement/index.jsp#/main/deployments/{ExternalExecutionId}?selection=current"
+		},
+    "configurationProperties": [
+        {
+            "name": "ServerUrl", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "CA Release Automation URL , e.g http://RAServer.ca.com:8080", 
+            "type": "String"
+        },
+		{
+            "name": "User Name", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "CA Release Automation User Name", 
+            "type": "String"
+        },
+		{
+            "name": "User Password", 
+            "required": true, 
+            "key": true, 
+            "secret": true, 
+            "queryable": false, 
+            "description": "Access Password", 
+            "type": "String"
+        },
+		{
+            "name": "Application Name", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "Application for Deployment", 
+            "type": "String"
+        },
+        {
+            "name": "Project Name", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "Project Name that should include this deployment", 
+            "type": "String"
+        },		
+		{
+            "name": "Deployment Plan Name", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "Deployment Plan Name", 
+            "type": "String"
+        },
+		{
+            "name": "Deployment Name", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "Deployment Name", 
+            "type": "String"
+        },
+		{
+            "name": "Environment Name", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "Environment for Deployment", 
+            "type": "String"
+        },
+		{
+            "name": "Template Category", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "Name of Deployment Template Category", 
+            "type": "String"
+        },
+		{
+            "name": "Deployment Template", 
+            "required": true, 
+            "key": true, 
+            "secret": false, 
+            "queryable": false, 
+            "description": "Name of Deployment Template", 
+            "type": "String"
+        }
+    ], 
+    "inputArtifactDetails": {
+        "minimumCount": 0, 
+        "maximumCount": 1
+    }, 
+    "outputArtifactDetails": {
+        "minimumCount": 0, 
+        "maximumCount": 0
+    }
+}
